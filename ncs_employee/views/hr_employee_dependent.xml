@@ -9,7 +9,7 @@
         <field name="name">Nhân viên</field>
         <field name="model">hr.employee.dependent</field>
         <field name="arch" type="xml">
-            <form>
+            <form string="Nhân viên">
                 <group>
                     <field name="x_name"/>
                     <field name="x_dob"/>

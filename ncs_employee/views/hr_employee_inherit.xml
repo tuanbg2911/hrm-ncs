@@ -9,12 +9,11 @@
                 <group >
                     <group string="Người phụ thuộc">
                         <field name="number_people_deducted"/>
-                        <field name="x_dependent">
+                        <field name="x_dependent" string="Tên nhân viên">
                                 <tree>
                                     <field name="x_name"/>
                                     <field name="x_dob"/>
                                     <field name="x_reduce"/>
-                                    <field name="x_employee_id"/>
                                 </tree>
                         </field>
                     </group>
@@ -23,8 +22,21 @@
 
             </xpath>
             <xpath expr="//field[@name='birthday']" position="after">
-                <field name="x_group_age" string="Nhóm tuổi"/>
+                <field name="group_age" string="Nhóm tuổi"/>
             </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_employee_inherit_form_view">
+        <field name="name">Nhân viên</field>
+        <field name="model">hr.employee.dependent</field>
+        <field name="arch" type="xml">
+            <form string="Nhân viên">
+                <group>
+                    <field name="x_name"/>
+                    <field name="x_dob"/>
+                    <field name="x_reduce"/>
+                </group>
+            </form>
         </field>
     </record>
 </odoo>

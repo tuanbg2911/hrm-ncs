@@ -1,41 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="contact_action" model="ir.actions.act_window">
-        <field name="name">Hợp Đồng</field>
-        <field name="res_model">contact</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-
-    <record id="hop_dong_tree_view" model="ir.ui.view">
-        <field name="name">Contact</field>
-        <field name="model">contact</field>
+        <record id="hr_contract_inherit" model="ir.ui.view">
+        <field name="name">hr contract form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
         <field name="arch" type="xml">
-            <tree>
-                <field name="x_kpi_income"/>
-            </tree>
-        </field>
-    </record>
-    <record id="hop_dong_form_view" model="ir.ui.view">
-        <field name="name">Hợp đồng</field>
-        <field name="model">contact</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group colspan="2">
-                        <group>
-                            <div class="oe_title">
-                                <h2>Đãi ngộ hàng tháng(Bằng tiền)</h2>
-                            </div>
-                            <field name="x_kpi_income"/>
-                        </group>
-                        <group>
-                            <h2>Phụ cấp hàng tháng</h2>
-                        </group>
+            <xpath expr="//page[@name='information']" position="inside">
+                <group>
+                    <group string="Đãi ngộ hàng tháng(Bằng tiền)">
+                        <label for="x_kpi_income"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="x_kpi_income"/><span>/month</span>
+                        </div>
+                        <label for="x_overtime_income"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="x_overtime_income"/><span>/month</span>
+                        </div>
+                        <label for="x_diligence"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="x_diligence" widget="motenary"/><span>/month</span>
+                        </div>
                     </group>
-                </sheet>
-
-            </form>
+                    <group string="Phụ cấp hàng tháng">
+                        <label for="sup_home"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_home"/><span>/month</span>
+                        </div>
+                        <label for="sup_gas"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_gas"/><span>/month</span>
+                        </div>
+                        <label for="sup_food"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_food"/><span>/month</span>
+                        </div>
+                        <label for="sup_medical"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_medical"/><span>/month</span>
+                        </div>
+                        <label for="sup_other"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_other"/><span>/month</span>
+                        </div>
+                        <label for="sup_phone"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_phone"/><span>/month</span>
+                        </div>
+                        <label for="sup_da"/>
+                        <div class="o_row mw-50" name="wage">
+                            <field name="sup_da"/><span>/month</span>
+                        </div>
+                    </group>
+                </group>
+            </xpath>
         </field>
     </record>
+
+
+
+
 </odoo>
