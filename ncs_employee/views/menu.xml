@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem name="Hợp đồng" id="hop_dong_id"/>
+    <menuitem name="Hợp đồng" id="don_dat_hang" parent="hop_dong_id" action="contact_action"/>
+    <menuitem name="Tuổi nhân viên" id="tuoi_nhan_vien_id" parent="hop_dong_id" action="hr_employee_age_action"/>
+
+</odoo>

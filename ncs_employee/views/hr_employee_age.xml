@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_employee_age_action" model="ir.actions.act_window">
+        <field name="name">Tuổi Nhân Viên</field>
+        <field name="res_model">hr.employee.age</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_employee_tree" model="ir.ui.view">
+        <field name="name">Tuổi nhân viên</field>
+        <field name="model">hr.employee.age</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="x_name"/>
+                <field name="x_min_age"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_employee_form" model="ir.ui.view">
+        <field name="name">Tuổi</field>
+        <field name="model">hr.employee.age</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group class="oe_title">
+                        <field name="x_name" string="Tên"/>
+                    </group>
+                    <group>
+                        <field name="x_min_age" string="Tuổi tối thiểu"/>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+</odoo>

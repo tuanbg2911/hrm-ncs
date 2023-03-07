@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_employee_plan_inherit" model="ir.ui.view">
+        <field name="name">plan form</field>
+        <field name="model">hr.plan.wizard</field>
+        <field name="inherit_id" ref="hr.plan_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='plan_id']" position="after">
+                <field name="name"/>
+            </xpath>
+        </field>
+
+    </record>
+
+</odoo>
