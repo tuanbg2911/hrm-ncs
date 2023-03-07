@@ -5,4 +5,18 @@
         <field name="res_model">hr.employee.dependent</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <record id="hr_employee_dependent_form" model="ir.ui.view">
+        <field name="name">Nhân viên</field>
+        <field name="model">hr.employee.dependent</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="x_name"/>
+                    <field name="x_dob"/>
+                    <field name="x_reduce"/>
+                </group>
+
+            </form>
+        </field>
+    </record>
 </odoo>
